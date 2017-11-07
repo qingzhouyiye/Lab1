@@ -1,0 +1,37 @@
+功能1：① 读取文件并生成有向图    Lab1.txt   共45个单词存在31个不重复单词                
+
+功能2：② 展示有向图              图片   
+
+          将有向图以图形文件形式保存到磁盘（可选）                                                
+
+功能3：   查询桥接词
+
+       ③ 3.1  不存在词           first     second                          
+       ④ 3.2  不存在桥接词       time      By                       
+       ⑤ 3.3  存在一个桥接词     important trends [development] /  becomes of [one]
+       ⑥ 3.4  存在多个桥接词     the       of     [format,study,meaning]
+
+功能4：⑦ 根据桥接词生成新文本 
+
+       文本1：In the big time, servitization one of the important trends-of the IT world.
+
+       [In the big data time servitization becomes one of the important development trends of the IT world]
+                   ----                   ---------                     -----------
+
+       文本2：In the big time servitization becomes the of the world.
+
+       [In the big data time servitization becomes the format/study/meaning of the IT world]
+                   ----                               ----------------------
+功能5：计算两个单词之间的最短路径
+
+       ⑧ 5.1一条最短路径：       time     word  
+                               time->servitization->becomes->one->of->this->word   路径长度 6（需要在原图中展示）
+       ⑨ 5.2两个单词不可达：     services  study
+
+          5.3多条最短路径（部分可选）：the   word
+                                the->format->of->this->word  路径长度 4
+                                the->meaning->of->this->word  路径长度 4
+                                the->study->of->this->word  路径长度 4
+          5.4输入一个单词（可选）：in
+
+功能6：⑩ 随机游走    将遍历节点输出为文本，并以文件形式写入磁盘
