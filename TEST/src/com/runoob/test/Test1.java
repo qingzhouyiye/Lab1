@@ -14,7 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Test1 {
-	helloword hello = new helloword();	
+	Main hello = new Main();	
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -25,8 +25,8 @@ public class Test1 {
 	    
 	    	String tokenizer;
 	    	System.out.print("Input the path:(E:\\eclipse-java\\workspace\\TEST\\example.txt)");
-	    	//String read=keyboard.readLine();
-	    	String read ="E:\\eclipse-java\\workspace\\TEST\\Lab1.txt";
+	    	String read=keyboard.readLine();
+	    	//String read ="E:\\eclipse-java\\workspace\\TEST\\Lab1.txt";
 	    	BufferedReader inFile = new 
 	    			BufferedReader(new FileReader(read));
 	    	tokenizer= inFile.readLine();
@@ -80,7 +80,7 @@ public class Test1 {
 	        	Edgedata[Number[j-1]][Number[j]]++ ;
 	        }
 	        String In_text[] = keyboard.readLine().split("\\W+");
-		hello.generateNewText(In_text,newdic,Edgedata);
+	        FunctionOp.generateNewText(In_text,newdic,Edgedata);
 		//fail("Not yet implemented");
 	}
 	

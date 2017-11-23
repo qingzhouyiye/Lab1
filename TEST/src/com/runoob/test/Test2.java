@@ -15,7 +15,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Test2 {
-	helloword hello = new helloword();
+	Main hello = new Main();
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -29,8 +29,8 @@ public class Test2 {
 	public void testQueryBridgeWords()throws IOException,FileNotFoundException {
 		String tokenizer;
     	System.out.print("Input the path:(E:\\eclipse-java\\workspace\\TEST\\example.txt)");
-    	//String read=keyboard.readLine();
-    	String read ="E:\\eclipse-java\\workspace\\TEST\\Lab1.txt";
+    	String read=keyboard.readLine();
+    	//String read ="E:\\eclipse-java\\workspace\\TEST\\Lab1.txt";
     	BufferedReader inFile = new 
     			BufferedReader(new FileReader(read));
     	tokenizer= inFile.readLine();
@@ -85,17 +85,17 @@ public class Test2 {
         }
         String word1="first";
         String word2="second";
-        hello.queryBridgeWords("first","time", newdic, Edgedata);
+        FunctionOp.queryBridgeWords("first","time", newdic, Edgedata);
         System.out.println();
-        hello.queryBridgeWords("time","second", newdic, Edgedata);
+        FunctionOp.queryBridgeWords("time","second", newdic, Edgedata);
         System.out.println();
-        hello.queryBridgeWords(word1, word2, newdic, Edgedata);
+        FunctionOp.queryBridgeWords(word1, word2, newdic, Edgedata);
         System.out.println();
-        hello.queryBridgeWords("time", "By", newdic, Edgedata);
+        FunctionOp.queryBridgeWords("time", "By", newdic, Edgedata);
         System.out.println();
-        hello.queryBridgeWords("important", "trends", newdic, Edgedata);
+        FunctionOp.queryBridgeWords("important", "trends", newdic, Edgedata);
         System.out.println();
-        hello.queryBridgeWords("the", "of", newdic, Edgedata);
+        FunctionOp.queryBridgeWords("the", "of", newdic, Edgedata);
 		//fail("Not yet implemented");
 	}
 }
